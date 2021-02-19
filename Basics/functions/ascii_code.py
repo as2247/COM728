@@ -7,6 +7,6 @@ if len(letter) == 1:
     print(f"The ASCII code for {letter} is: {ascii}")
     print("Program Ended")
 else:
-    print("Please enter a single valid character ")
+    print("Please enter a single, valid character ")
 
 
