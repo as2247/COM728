@@ -4,8 +4,7 @@ def directions():
 
 
 def run():
-    directions()
-    return directions()
+    print(directions())
 
-
-print(run())
+if __name__ == "__main__":
+    run()
