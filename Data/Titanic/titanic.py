@@ -32,6 +32,16 @@ def display_passenger_names():
         passenger_name = record[3]
         print(passenger_name)
 
+
+def display_num_survivors():
+    num_survived = 0
+    for record in records:
+        survival_status = int(record[1])
+        if survival_status == 1:
+            num_survived += 1
+    print(f"{num_survived} passengers survived")
+
+
 def run():
     load_data("./titanic.csv")
     num_records = len(records)
@@ -40,8 +50,11 @@ def run():
     print(f"You have selected option: {selected_option}")
     if selected_option == 1:
         display_passenger_names()
+    elif selected_option == 2:
+        display_num_survivors()
     else:
         print("Error! Option is not recognised")
+
 
 if __name__ == "__main__":
     run()
