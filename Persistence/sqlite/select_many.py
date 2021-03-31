@@ -1,13 +1,12 @@
 import sqlite3
 
 
-def retrieve_bots(num_bots):
+def retrieve_bots(num_bots=None):
     db = sqlite3.connect("bots.db")
     cursor = db.cursor()
 
     sql = "SELECT * FROM bots;"
     cursor.execute(sql)
-
 
     if num_bots == None:
         records = cursor.fetchall()
@@ -22,6 +21,7 @@ def retrieve_bots(num_bots):
 
 def run():
     retrieve_bots(2)
+
 
 if __name__ == "__main__":
     run()
